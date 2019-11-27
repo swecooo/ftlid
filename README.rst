@@ -19,7 +19,7 @@ Example
 .. code:: python
 
 
-    from ftlid import identify_language
+    from ftlid import identify_language, load_model
 
     # prints 'en'
     print(identify_language('Hello, how are you?'))
@@ -32,6 +32,13 @@ Example
 
     # prints (['en', 'de'], array([0.50208992, 0.30427793]))
     print(identify_language('And then he said "Ich liebe dich"!', with_prob=True, k=2))
+
+    # if you want to use your custom model
+    print(identify_language('Hello, how are you?', model_path='model.ftz'))
+
+    # if you would like to pass the model yourself or prevent it from being loaded on every request
+    model = load_model('model.ftz')
+    print(identify_language('Hello, how are you?', model=model))
 
 
 License
