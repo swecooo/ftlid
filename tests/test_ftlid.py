@@ -5,7 +5,7 @@ from ftlid import __version__, identify_language, DEFAULT_MODEL
 
 
 def test_version():
-    assert __version__ == '0.1.1'
+    assert __version__ == '0.1.2'
 
 
 def test_simple_prediction():
